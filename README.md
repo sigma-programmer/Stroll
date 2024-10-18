@@ -29,13 +29,13 @@ project-root/ │ ├── controllers/ │ └── questionController.js │
 Install dependencies:
 
 bash
-Copy code
+
 npm install
 Set up environment variables:
 
 Create a .env file in the root directory and add the following:
 env
-Copy code
+
 MONGO_URI=mongodb://localhost:27017/question_rotation
 PORT=5000
 Ensure to replace mongodb://localhost:27017/question_rotation with your actual MongoDB connection string if needed.
@@ -43,7 +43,7 @@ Ensure to replace mongodb://localhost:27017/question_rotation with your actual M
 Start the server:
 
 bash
-Copy code
+
 npm start
 The server will run on http://localhost:5000.
 
@@ -55,11 +55,11 @@ URL Params:
 region: The region for which to fetch the question (e.g., Singapore, US).
 Example Request
 http
-Copy code
+
 GET http://localhost:5000/api/questions/Singapore
 Example Response
 json
-Copy code
+
 {
   "success": true,
   "question": "Question 1"
@@ -68,7 +68,7 @@ Error Response
 In case of an error (e.g., region not configured):
 
 json
-Copy code
+
 {
   "success": false,
   "message": "Region not configured for question cycles"
@@ -80,7 +80,7 @@ Click Send to receive the question for the specified region.
 Database Structure
 Questions Collection
 json
-Copy code
+
 [
   {
     "region": "Singapore",
@@ -93,7 +93,7 @@ Copy code
 ]
 Cycles Collection
 json
-Copy code
+
 [
   {
     "region": "Singapore",
